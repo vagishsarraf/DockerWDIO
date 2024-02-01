@@ -33,18 +33,6 @@ services:
     volumes:
       - "/dev/shm:/dev/shm"
 
-  firefox:
-    image: "selenoid/firefox:${FIREFOX_VERSION}"
-    container_name: firefox
-    links:
-      - selenoid
-    depends_on:
-      - selenoid
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
 networks:
   selenoid:
     name: selenoid

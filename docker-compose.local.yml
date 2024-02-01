@@ -65,20 +65,6 @@ services:
     volumes:
       - "/dev/shm:/dev/shm"
 
-  vnc_firefox:
-    image: "selenoid/vnc_firefox:${FIREFOX_VERSION}"
-    container_name: vnc_firefox
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
 networks:
   selenoid:
     name: selenoid
