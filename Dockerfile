@@ -1,8 +1,5 @@
 FROM alpine
 
-# The LABEL instruction adds metadata to an image
-LABEL maintainer="madhank93"
-
 # The RUN instruction will execute any commands in a new layer on top of the current image and commit the results
 # apk is the package manager for alpine based images
 # using that installing necessary packages
